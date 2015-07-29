@@ -1,9 +1,4 @@
----
-language: css
-tags: css, style, syntax, selectors
-type: lecture
-resources: 0
----
+
 
 ## CSS Fundamentals ~ 25min
 
