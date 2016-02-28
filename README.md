@@ -136,7 +136,18 @@ Selects an element with matching id attribute name. This selector is indicated b
 ```
 #### Compound
 
-...
+h1, h2, #box {
+  font-family: Arial, Helvetica, sans-serif;
+}
+```
+
+Selects all matched elements in the compound set. This selector is indicated by a `,` comma separating the selectors of the set. Each element within the coma separated list will be styled the same.
+
+```html
+<h1>Heading</h1>
+<h2>Subheading</h2>
+<div id="box">I'm a box</span>
+```
 
 #### Descendent
 
@@ -183,7 +194,7 @@ h3 + p {
 }
 ```
 
-Selects an element that that appears directly after the former element assuming they are both siblings (in the same level of nesting, in the same parent). This selector is indicated by a `+` plus symbol between the former sibling and the selected element that follows.
+Selects an element that appears directly after the former element assuming they are both siblings (in the same level of nesting, in the same parent). This selector is indicated by a `+` plus symbol between the former sibling and the selected element that follows.
 
 ```html
 <h3>Heading</h3>
@@ -193,7 +204,19 @@ Selects an element that that appears directly after the former element assuming 
 
 #### General Sibling (Preceded)
 
-...
+```css
+h2 ~ p {
+  color: black;
+}
+```
+
+Selects all elements that appear directly after the former element. This selector is indicated by a `~` tilda symbol between the former sibling and the selected element that follows.
+
+```html
+<h2>Sub heading</h2>
+<p>I'm selected because I appear after an h2.</p>
+<p>I'm also selected for the same reason, in fact any paragraphs on the rest of the page after the h2 will be selected.</p>
+```
 
 #### Universal
 
@@ -225,7 +248,49 @@ Selects an element with a matching attribute value. This selector is indicated b
 <img src="myimage.jpg" alt="Cat">
 ```
 
+##### Other attribute selectors include:
+
+`a[href^="http"]` The `^=` carrot symbol selects elements that start with the matching value. Such as `<a href="http://google.com">google</a>`.
+
+`p[class$="dog"]` The `$=` dollar sign selects elements that end with the matching value. Such as `<p class="bigbdog">...</a>`.
+
+`img[alt*="love"]` The `*=` asterisk selects elements that have the matched characters appearing anywhere within the value. Such as `<img src="myimage.jpg" alt="I love you.">`.
+
+`p[class~="monkey"]` The `~=` tilda symbol selects elements that contain the term within a space separated value. Such as `<p class="zoo monkey details">...</p>`.
+
+`p[class|="birds"]` The `|=` pipe symbol selects elements that contain the term within a dash separated value. Such as `<p class="new-birds-today">...</p>`.
+
 #### Pseudo Class
+
+```css
+a:link {
+  text-decoration: none;
+}
+```
+
+Selects an element with based on the unique relationship or state described in the selector. This selector is indicated by `:` colon symbol, followed by the psuedo class that describes the elements state or positioning amongst other elements.
+
+```html
+<a href="about.html">About</a>
+```
+
+##### Other psuedo class selectors include:
+
+`a:link` selects links in their default state before the visitor has interacted with them.
+
+`a:visited` selects links after the user has already clicked on them and is visiting that page again.
+
+`a:hover` selects links when the user is hovering their mouse over the link.
+
+`a:active` selects links for only the moment when the mouse button is pressed when clicking on the link.
+
+`p:first-child` selects elements that are the first child when appearing inside a common parent. Such as `<div><p>I'm selected</p><p>I'm not</p><p>Neither am I</p></div>`
+
+`p:last-child` selects elements that are the last child when appearing inside a common parent. Such as `<div><p>I'm not selected</p><p>Neither am I</p><p>I'm selected</p></div>`
+
+These are just a few psuedo selectors, there are many additional ones you can explore in the resource links provided at the botoom of this lesson.
+
+### Authority & Inheritance
 
 ...
 
@@ -236,6 +301,8 @@ Selects an element with a matching attribute value. This selector is indicated b
 ## Summary
 
 - CSS allows us to style our HTML pages.
+- CSS has three distinct formats, although external CSS is considered the best option for styling websites.
+- CSS provides a wide range of selectors to select different elements. Get to know them all.
 - ...
 
 ## Resources
