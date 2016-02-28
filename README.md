@@ -95,41 +95,135 @@ CSS gives us a variety of ways to select different elements and style them.
 
 #### Type
 
-Selects an element of the specified type
-
-|CSS|HTML|
-|---|----|
-|```css
+```css
 p {
-    color: red;
+  color: red;
 }
-```|```html
+```
+
+Selects an element of the specified type based directly on providing the element name.
+
+```html
 <p>Lorem ipsum</p>
-```|
+```
 
 #### Class
 
-...
+```css
+.thick {
+  font-weight: bold;
+}
+```
+
+Selects an element with matching class attribute name. This selector is indicated by the preceeding `.` dot (period).
+
+```html
+<span class="thick">I'm thick</span>
+```
 
 #### Id
+
+```css
+#box {
+  background: blue;
+}
+```
+
+Selects an element with matching id attribute name. This selector is indicated by the preceeding `#` hashtag symbol.
+
+```html
+<div id="box">I'm a box</span>
+```
+#### Compound
 
 ...
 
 #### Descendent
 
-...
+```css
+#nav li {
+  background: blue;
+}
+```
+
+Selects an element that is nested inside of the specified parent element. This selector is indicated by a ` ` keyboard space between the parent and the child to be selected.
+
+```html
+<ul id="nav">
+  <li>child</li>
+</ul>
+```
 
 #### Child
 
+```css
+#list > li {
+  color: black;
+}
+```
+
+Selects an element that is nested only one level deep inside of the specified parent element. Only selects direct children and not grandchildren. This selector is indicated by a `>` greater than symbol between the parent and the child to be selected.
+
+```html
+<ul id="list">
+  <li>child</li>
+  <li>child
+    <ul>
+      <li>grand child</li>
+    </ul>
+  </li>
+</ul>
+```
+
+#### Adjacent Sibling
+
+```css
+h3 + p {
+  color: green;
+}
+```
+
+Selects an element that that appears directly after the former element assuming they are both siblings (in the same level of nesting, in the same parent). This selector is indicated by a `+` plus symbol between the former sibling and the selected element that follows.
+
+```html
+<h3>Heading</h3>
+<p>I'm a paragraph that is selected because I come directly after an h3.</p>
+<p>I'm not selected.</p>
+```
+
+#### General Sibling (Preceded)
+
 ...
 
-#### Sibling
+#### Universal
 
-...
+```css
+* {
+  color: orange;
+}
+```
+
+Selects elements where the properties specified have not been styled by any other selectors. This selector is indicated by a `*` asterisk symbol.
+
+```html
+<h5>Sub heading</h5>
+```
+
+We haven't yet specified a color style for `h5` anywhere else yet on our CSS so they will get the color orange now being covering under the universal selector.
 
 #### Attribute
 
-...
+```css
+img[alt="Cat"] {
+  border: 1px solid black;
+}
+```
+
+Selects an element with a matching attribute value. This selector is indicated by `[]` square brackets, followed by the attribute property and value of the selected element within the brackets.
+
+```html
+<img src="myimage.jpg" alt="Cat">
+```
 
 #### Pseudo Class
 
