@@ -121,6 +121,26 @@ Selects an element with matching class attribute name. This selector is indicate
 <span class="thick">I'm thick</span>
 ```
 
+You can apply a class name to as many elements as you like acroos the same page and across any pages in your website. This is a good selector for sprinkling the same style to many different elements.
+
+You can also apply more than one class to the same element for example lets apply two classes to the same paragraph.
+
+```css
+.thick {
+    font-weight: bold;
+}
+
+.alert {
+    color: red;
+}
+```
+
+To apply the two classes we simply use a space to separate their names,
+
+```html
+<p class="thick alert">Warning...</p>
+```
+
 #### Id
 
 ```css
@@ -134,6 +154,9 @@ Selects an element with matching id attribute name. This selector is indicated b
 ```html
 <div id="box">I'm a box</span>
 ```
+
+A single Id name should only be applied to one element per page.
+
 #### Compound
 
 h1, h2, #box {
@@ -290,13 +313,149 @@ Selects an element with based on the unique relationship or state described in t
 
 These are just a few psuedo selectors, there are many additional ones you can explore in the resource links provided at the botoom of this lesson.
 
-### Authority & Inheritance
+### Authority
+
+It is common when we are styling our HTML pages that we might accidentally write two selectors that are targeting the same element. Let's say for example you intend all `<h1>` level 1 headings to have light blue text, but you also gave some of the headings a class of intro `<h1 class="intro">` and these intro headings should have the text color of dark blue instead. What happens to the `<h1 class="intro">` elements will they have light blue or dark blue text? Fortunately CSS has rules that determine which selector wins. The strength of a selector to override another is known as authority. In CSS the more specific a selector the more authority it carries.
+
+```css
+h1 {
+  color: lightblue;
+}
+
+.intro {
+  color: darkblue;
+}
+```
+
+In the CSS code above our first selector `h1` selects all level 1 headings, where as our second selector `.intro`, selects elements that have the specific class of `intro` applied. In the case of the following html which will beat the other?
+
+```html
+<h1 class="intro">Welcome</h1>
+```
+
+In this case a class is more specific as it is applied to only certain h1, where as selecting all h1s is very general. Thus classes like `.intro` have more authority than a type selector such as `h1`. The end result is that the heading has dark blue text instead of light blue. The general rule is descendent overrides id which overrides class which overrides type which overrides universal. 
+
+If there are two selectors of equal authgority the one that is written further down the page (closer to the bottom) will win. This is the last man rule.
+
+See the link in the resources at the bottom of the lesson to explore CSS selector authority in more detail.
+
+#### Inheritance
+
+Certain CSS styles are inherited from a parent down to its child elements. One such example is most of the typography properties. We will discuss these in more detail below, but just to give you a quick example. Lets say we add the `font-family: Arial;` to a `ul` unordered list.
+
+```css
+ul {
+    font-family: Arial;
+}
+```
+
+```html
+<ul>
+    <li>Apples</li>
+    <li>Oranges</li>
+    <li>Bananas</li>
+</ul>
+```
+
+In this case, all the `li` list items that are children of the `ul` will inherit the Arial font from their `ul` parent simply by being inside of it.
+
+Certain properties like `font-family` can be inherited by a parent, however other propertied by default are not directly inherited, for example
+
+```css
+ul {
+  border: 1pc solid black;
+}
+```
+
+A border will only effect the `ul` it is applied to and the `li` will not inherit the border by default. It is good to know which properties are inherited and which are not. there are also some CSS values that allow us to change the defualt behavior of inheritance. See 
+
+### Colors
+
+#### Names
+
+There are 16 cross browser compatible color names: aqua, black, fuchsia, (gray, grey), green, lime, maroon, navy, olive, purple, red, silver, teal, white, and yellow.
+
+#### Hexidecimal
+
+There are over 16 million possible color combinations using hex values. Hex values are preceeded by a `#` hashtag symbol and follow with three values back to back listed as numbers 0-9 and letters A-F. The first two characters are for the amount of red, followed by green, and blue. For example with F being the largest amount of a color and 0 being the lowest, the hex color `#FF0000` is the brightest color red. In situtaions where the three pairs of hex values match as in the last example you can shorten this to: `#F00` instead. Note that this only works for hex values where each of the three pairs match. The hex color `#3345AF` which incidentally is a dark blue color can not be shortened.
+
+#### RGB and RGBA
+
+We can produce any color our eye can see using RGB values. These are created by listing a set of numbers for red, green, and blue respectively using a range of 0 the absence of light and 255 the brightest amount of light possible for that color. These values are comma separated and enclosed in parenthesis and preceeded by rgb, `rbg(255,0,0)` is the color red. Using RGBA we supply a fourth number which is the alpha value. This is the opcaity given in a range of 0-1, where 0 is 0% and 100 is 100% opacity. rgba(255,0,0,0.5) is 50% transparent red color.
+
+#### HSL and HSLA
+
+There are other supported values such as HSL (Hue Saturation Lightness) or HSLA (Hue Saturation, LIghtness, Alpha) These are less commonly seen, but if you're interested you can read more about them in the resource links at the end of the lesson.
+
+### Font Properties
+
+There are many font properties you can adjust. Here are a few useful ones and some of their possible values separated by `|` pipes.
+
+`font-family: Arial, Helvetica, san-serif`
+
+`font-size: 100% | 1em | 12pt | 16px`
+
+`font-style: normal | italic`
+
+`font-weight: normal | bold`
+
+`color: white | #FFF | rgba(255,255,255,1)`
+
+`font: bold 1em/2em Arial, sans-serif`
+
+`text-align: left | center | right`
+
+`text-decoration: none | overline | underline | line-through`
+
+`text-indent: 1% | 1em | 12pt | 16px`
+
+`text-shadow: 3px 3px 10px #000`
+
+`text-transform: none | uppercase | lowercase | capitalize`
+
+`letter-spacing: normal | 1em | 12pt | 16px`
+
+`line-height: normal | 1em | 12pt | 16px`
+
+`word-spacing: normal | 1em | 12pt | 16px`
+
+`word-wrap: normal | break-word`
+
+`white-space: normal | no-wrap`
+
+### Web Fonts
 
 ...
 
-### Text Properties
+```shell
+
+```
 
 ...
+
+```css
+@font-face {
+  font-family: "Skolar";
+  src: url("../fonts/Skolar.webfont");
+}
+
+p {
+  font-family: "Skolar", Georgia, serif;
+}
+```
+
+...
+
+### Comments
+
+To comment in CSS simply start with `/*` and end with `*/`
+
+```css
+/* this is a comment */
+
+/* It can be single, 
+   or multiple lines */
+```
 
 ## Summary
 
@@ -310,6 +469,7 @@ These are just a few psuedo selectors, there are many additional ones you can ex
 - [Presentation Slides](https://docs.google.com/presentation/d/1wTkUPKfSKt7ueUeKsZ6cYQ0RjRzpnEDLCqKKTB041P8/edit?usp=sharing)
 - [MDN - CSS Tutorials for Beginners](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Getting_started)
 - [MDN - CSS Property Reference](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference)
+- [MDN - CSS Inheritance](https://developer.mozilla.org/en-US/docs/Web/CSS/inheritance)
 - [Tuts Plus - 30 CSS selectors to Memorize](http://code.tutsplus.com/tutorials/the-30-css-selectors-you-must-memorize--net-16048)
 - [Learn More Pseudo Selectors](http://css-tricks.com/pseudo-class-selectors/)
 - [CSS3.info - Using Web Fonts](http://www.css3.info/preview/web-fonts-with-font-face/)
@@ -318,5 +478,6 @@ These are just a few psuedo selectors, there are many additional ones you can ex
 - [CSS Validator](http://jigsaw.w3.org/css-validator/)
 - [CSS Diner Online Game](http://flukeout.github.io/)
 - [Adobe - Color Scheme Tool](https://color.adobe.com/create/color-wheel/)
+- [CSS Tricks - HSLA](https://css-tricks.com/yay-for-hsla/)
 
-<p data-visibility='hidden'>View <a href='https://learn.co/lessons/fe-css-fundamentals' title='CSS Fundamentals ~ 25min'>CSS Fundamentals ~ 25min</a> on Learn.co and start learning to code for free.</p>
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/fe-css-fundamentals' title='CSS Fundamentals'>CSS Fundamentals</a> on Learn.co and start learning to code for free.</p>
