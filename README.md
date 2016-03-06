@@ -335,7 +335,7 @@ In the CSS code above our first selector `h1` selects all level 1 headings, wher
 
 In this case a class is more specific as it is applied to only certain h1, where as selecting all h1s is very general. Thus classes like `.intro` have more authority than a type selector such as `h1`. The end result is that the heading has dark blue text instead of light blue. The general rule is descendent overrides id which overrides class which overrides type which overrides universal. 
 
-If there are two selectors of equal authgority the one that is written further down the page (closer to the bottom) will win. This is the last man rule.
+If there are two selectors of equal authority the one that is written further down the page (closer to the bottom) will win. This is the last man rule.
 
 See the link in the resources at the bottom of the lesson to explore CSS selector authority in more detail.
 
@@ -529,3 +529,5 @@ To comment in CSS simply start with `/*` and end with `*/`
 - [CSS Tricks - HSLA](https://css-tricks.com/yay-for-hsla/)
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/fe-css-fundamentals' title='CSS Fundamentals'>CSS Fundamentals</a> on Learn.co and start learning to code for free.</p>
+
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/fe-css-fundamentals'>CSS Fundamentals</a> on Learn.co and start learning to code for free.</p>
