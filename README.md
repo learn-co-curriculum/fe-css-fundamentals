@@ -375,9 +375,9 @@ A border will only effect the `ul` it is applied to and the `li` will not inheri
 
 There are 16 cross browser compatible color names: aqua, black, fuchsia, (gray, grey), green, lime, maroon, navy, olive, purple, red, silver, teal, white, and yellow.
 
-#### Hexidecimal
+#### Hexadecimal
 
-There are over 16 million possible color combinations using hex values. Hex values are preceeded by a `#` hashtag symbol and follow with three values back to back listed as numbers 0-9 and letters A-F. The first two characters are for the amount of red, followed by green, and blue. For example with F being the largest amount of a color and 0 being the lowest, the hex color `#FF0000` is the brightest color red. In situtaions where the three pairs of hex values match as in the last example you can shorten this to: `#F00` instead. Note that this only works for hex values where each of the three pairs match. The hex color `#3345AF` which incidentally is a dark blue color can not be shortened.
+There are over 16 million possible color combinations using hex values. Hex values are preceeded by a `#` hashtag symbol and followed by three values back to back listed as numbers 0-9 and letters A-F. The first two characters are for the amount of red, followed by green, and blue. For example with F being the largest amount of a color and 0 being the lowest, the hex color `#FF0000` is the brightest color red. In situations where the three pairs of hex values match, as seen in the last example, you can shorten `#FF0000` to `#F00.` Note that this only works for hex values where each of the three pairs match. The hex color `#3345AF`, which incidentally is a dark blue color, can not be shortened.
 
 #### RGB and RGBA
 
@@ -529,3 +529,5 @@ To comment in CSS simply start with `/*` and end with `*/`
 - [CSS Tricks - HSLA](https://css-tricks.com/yay-for-hsla/)
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/fe-css-fundamentals' title='CSS Fundamentals'>CSS Fundamentals</a> on Learn.co and start learning to code for free.</p>
+
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/fe-css-fundamentals'>CSS Fundamentals</a> on Learn.co and start learning to code for free.</p>
