@@ -359,7 +359,7 @@ ul {
 
 In this case, all the `li` list items that are children of the `ul` will inherit the Arial font from their `ul` parent simply by being inside of it.
 
-Certain properties like `font-family` can be inherited by a parent, however other propertied by default are not directly inherited, for example
+Certain properties like `font-family` can be inherited by a parent, however other properties by default are not directly inherited, for example
 
 ```css
 ul {
@@ -529,3 +529,5 @@ To comment in CSS simply start with `/*` and end with `*/`
 - [CSS Tricks - HSLA](https://css-tricks.com/yay-for-hsla/)
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/fe-css-fundamentals' title='CSS Fundamentals'>CSS Fundamentals</a> on Learn.co and start learning to code for free.</p>
+
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/fe-css-fundamentals'>CSS Fundamentals</a> on Learn.co and start learning to code for free.</p>
