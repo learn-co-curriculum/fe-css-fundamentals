@@ -32,7 +32,7 @@ p {
 }
 ```
 
-In the code example above `p` is known as a selector, in this case it is selecting all paragraphs in the HTML pages linking to this CSS file. Selectors determine which elements will be effected by the styles we set. following in `{}` curly braces contains declarations which are CSS rules that will style our selected element. Declarations are made up of a property shown here as `color` c followed by a value shown here as `red`. Notice that we use a `:` colon to separate the property from its value. All decalrations end in a `;` semicolon. Multiple declarations can be applied to the same selector like so,
+In the code example above `p` is known as a selector, in this case it is selecting all paragraphs in the HTML pages linking to this CSS file. Selectors determine which elements will be effected by the styles we set. following in `{}` curly braces contains declarations which are CSS rules that will style our selected element. Declarations are made up of a property shown here as `color` followed by a value shown here as `red`. Notice that we use a `:` colon to separate the property from its value. All decalrations end in a `;` semicolon. Multiple declarations can be applied to the same selector like so,
 
 ```css
 p {
@@ -529,3 +529,5 @@ To comment in CSS simply start with `/*` and end with `*/`
 - [CSS Tricks - HSLA](https://css-tricks.com/yay-for-hsla/)
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/fe-css-fundamentals' title='CSS Fundamentals'>CSS Fundamentals</a> on Learn.co and start learning to code for free.</p>
+
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/fe-css-fundamentals'>CSS Fundamentals</a> on Learn.co and start learning to code for free.</p>
