@@ -367,7 +367,7 @@ ul {
 }
 ```
 
-A border will only effect the `ul` it is applied to and the `li` will not inherit the border by default. It is good to know which properties are inherited and which are not. there are also some CSS values that allow us to change the defualt behavior of inheritance. See 
+A border will only effect the `ul` it is applied to and the `li` will not inherit the border by default. It is good to know which properties are inherited and which are not. There are also some CSS values that allow us to change the defualt behavior of inheritance.
 
 ### Colors
 
@@ -529,3 +529,5 @@ To comment in CSS simply start with `/*` and end with `*/`
 - [CSS Tricks - HSLA](https://css-tricks.com/yay-for-hsla/)
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/fe-css-fundamentals' title='CSS Fundamentals'>CSS Fundamentals</a> on Learn.co and start learning to code for free.</p>
+
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/fe-css-fundamentals'>CSS Fundamentals</a> on Learn.co and start learning to code for free.</p>
