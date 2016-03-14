@@ -6,11 +6,11 @@ In this lesson we will learn about the fundamentals of CSS including syntax, for
 
 ## Objectives
 
-1. Purpose of CSS
-1. Getting to know CSS syntax
-2. Various formats of CSS
-3. CSS Selectors
-4. Font & Color Properties
+1. Explain the purpose of CSS
+1. List and use various CSS syntax
+2. Use various formats of CSS
+3. Use CSS Selectors
+4. Use font & color properties
 
 ## Styling The Front-End
 
@@ -20,7 +20,7 @@ In this lesson we will learn about the fundamentals of CSS including syntax, for
 
 ### What Is The Purpose of CSS?
 
-CSS stands for Cascading Style Sheet. Cascading because it can apply to multiple elements across many pages, and style sheet because it is a single body of code that adds style across the many pages it effects. If we imagine the HTML as the structure of a house, the brick and motar, the walls, the ceilings, the roof. The CSS paints the walls and arranges the furniture. It is the decorator that breathes color, typographic style, and positioning of elements among other things. It was created as an easier way to style our pages from a single location.
+CSS stands for Cascading Style Sheet. Cascading because it can apply to multiple elements across many pages, and style sheet because it is a single body of code that adds style across the many pages it affects. We can imagine the HTML as the structure of a house, the brick and mortar, the walls, the ceilings, the roof. The CSS then paints the walls and arranges the furniture. It is the decorator that breathes color, typographic style, and positioning of elements among other things. It was created as an easier way to style our pages from a single location.
 
 ### Syntax
 
@@ -32,7 +32,7 @@ p {
 }
 ```
 
-In the code example above `p` is known as a selector, in this case it is selecting all paragraphs in the HTML pages linking to this CSS file. Selectors determine which elements will be effected by the styles we set. following in `{}` curly braces contains declarations which are CSS rules that will style our selected element. Declarations are made up of a property shown here as `color` c followed by a value shown here as `red`. Notice that we use a `:` colon to separate the property from its value. All decalrations end in a `;` semicolon. Multiple declarations can be applied to the same selector like so,
+In the code example above `p` is known as a selector; in this case it is selecting all paragraphs in the HTML pages linking to this CSS file. Selectors determine which elements will be affected by the styles we set. Following this in `{}` curly braces are declarations which are CSS rules that will style our selected element. Declarations are made up of a property shown here as `color` c followed by a value shown here as `red`. Notice that we use a `:` colon to separate the property from its value. All decalrations end in a `;` semicolon. Multiple declarations can be applied to the same selector as seen below. 
 
 ```css
 p {
@@ -54,7 +54,7 @@ Inline CSS is written within a `style` attribute and only effects the single ele
 
 #### Embedded
 
-Embedded CSS is included typically wihtin the `<head>` section of an HTML document within `<style>` elements. This only effects the elements selected across the particular page it is includded within.
+Embedded CSS is included typically wihtin the `<head>` section of an HTML document within `<style>` elements. This only affects the elements selected across the particular page that it is includded within.
 
 ```html
 <style>
@@ -65,7 +65,7 @@ Embedded CSS is included typically wihtin the `<head>` section of an HTML docume
 ```
 #### External
 
-External CSS is writeen inside an external and separate file that is then linked to from other HTML pages. This is the preferred format to use as it allows us the effect the style of many HTML pages site-wide from a single file. This has two components to make it work, our CSS must be written in its own `.css` file and in our HTML file we must link to our CSS from our head section,
+External CSS is written inside an external and separate file that is then linked to from other HTML pages. This is the preferred format to use as it allows us to affect the style of many HTML pages site-wide from a single file. This has two components to make it work: our CSS must be written in its own `.css` file, and in our HTML file we must link to our CSS from our head section.
 
 **css/style.css**
 
@@ -101,7 +101,7 @@ p {
 }
 ```
 
-Selects an element of the specified type based directly on providing the element name.
+This selects an element of the specified type based directly on providing the element name.
 
 ```html
 <p>Lorem ipsum</p>
@@ -115,15 +115,15 @@ Selects an element of the specified type based directly on providing the element
 }
 ```
 
-Selects an element with matching class attribute name. This selector is indicated by the preceeding `.` dot (period).
+This selects an element with matching class attribute name. This selector is indicated by the preceeding `.` dot (period).
 
 ```html
 <span class="thick">I'm thick</span>
 ```
 
-You can apply a class name to as many elements as you like acroos the same page and across any pages in your website. This is a good selector for sprinkling the same style to many different elements.
+You can apply a class name to as many elements as you like across the same page and across any pages in your website. This is a good selector for sprinkling the same style to many different elements.
 
-You can also apply more than one class to the same element for example lets apply two classes to the same paragraph.
+You can also apply more than one class to the same element. For example, let's apply two classes to the same paragraph.
 
 ```css
 .thick {
@@ -135,7 +135,7 @@ You can also apply more than one class to the same element for example lets appl
 }
 ```
 
-To apply the two classes we simply use a space to separate their names,
+To apply the two classes we simply use a space to separate their names.
 
 ```html
 <p class="thick alert">Warning...</p>
@@ -149,7 +149,7 @@ To apply the two classes we simply use a space to separate their names,
 }
 ```
 
-Selects an element with matching id attribute name. This selector is indicated by the preceeding `#` hashtag symbol.
+Thi selects an element with matching id attribute name. This selector is indicated by the preceeding `#` hashtag symbol.
 
 ```html
 <div id="box">I'm a box</span>
@@ -159,12 +159,13 @@ A single Id name should only be applied to one element per page.
 
 #### Compound
 
+```css
 h1, h2, #box {
   font-family: Arial, Helvetica, sans-serif;
 }
 ```
 
-Selects all matched elements in the compound set. This selector is indicated by a `,` comma separating the selectors of the set. Each element within the coma separated list will be styled the same.
+This selects all matched elements in the compound set. This selector is indicated by a `,` comma separating the selectors of the set. Each element within the coma separated list will be styled the same.
 
 ```html
 <h1>Heading</h1>
@@ -180,7 +181,7 @@ Selects all matched elements in the compound set. This selector is indicated by 
 }
 ```
 
-Selects an element that is nested inside of the specified parent element. This selector is indicated by a ` ` keyboard space between the parent and the child to be selected.
+This selects an element that is nested inside of the specified parent element. This selector is indicated by a ` ` keyboard space between the parent and the child to be selected.
 
 ```html
 <ul id="nav">
@@ -196,7 +197,7 @@ Selects an element that is nested inside of the specified parent element. This s
 }
 ```
 
-Selects an element that is nested only one level deep inside of the specified parent element. Only selects direct children and not grandchildren. This selector is indicated by a `>` greater than symbol between the parent and the child to be selected.
+This selects an element that is nested only one level deep inside of the specified parent element. It only selects direct children and not grandchildren. This selector is indicated by a `>` (greater than) symbol between the parent and the child to be selected.
 
 ```html
 <ul id="list">
@@ -217,7 +218,7 @@ h3 + p {
 }
 ```
 
-Selects an element that appears directly after the former element assuming they are both siblings (in the same level of nesting, in the same parent). This selector is indicated by a `+` plus symbol between the former sibling and the selected element that follows.
+This selects an element that appears directly after the former element assuming they are both siblings (in the same level of nesting, in the same parent). This selector is indicated by a `+` plus symbol between the former sibling and the selected element that follows.
 
 ```html
 <h3>Heading</h3>
@@ -225,7 +226,7 @@ Selects an element that appears directly after the former element assuming they 
 <p>I'm not selected.</p>
 ```
 
-#### General Sibling (Preceded)
+#### General Sibling 
 
 ```css
 h2 ~ p {
@@ -233,7 +234,7 @@ h2 ~ p {
 }
 ```
 
-Selects all elements that appear directly after the former element. This selector is indicated by a `~` tilda symbol between the former sibling and the selected element that follows.
+This selects all elements that appear directly after the former element. This selector is indicated by a `~` tilde symbol between the former sibling and the selected element that follows it.
 
 ```html
 <h2>Sub heading</h2>
@@ -249,13 +250,13 @@ Selects all elements that appear directly after the former element. This selecto
 }
 ```
 
-Selects elements where the properties specified have not been styled by any other selectors. This selector is indicated by a `*` asterisk symbol.
+This selects elements where the properties specified have not been styled by any other selectors. This selector is indicated by a `*` asterisk symbol.
 
 ```html
 <h5>Sub heading</h5>
 ```
 
-We haven't yet specified a color style for `h5` anywhere else yet on our CSS so they will get the color orange now being covering under the universal selector.
+We haven't yet specified a color style for `h5` anywhere else yet on our CSS so they will get the color orange now being covered under the universal selector.
 
 #### Attribute
 
@@ -265,23 +266,23 @@ img[alt="Cat"] {
 }
 ```
 
-Selects an element with a matching attribute value. This selector is indicated by `[]` square brackets, followed by the attribute property and value of the selected element within the brackets.
+This selects an element with a matching attribute value. This selector is indicated by `[]` square brackets, followed by the attribute property and value of the selected element within the brackets.
 
 ```html
 <img src="myimage.jpg" alt="Cat">
 ```
 
-##### Other attribute selectors include:
+##### Other Attribute Selectors Include:
 
-`a[href^="http"]` The `^=` carrot symbol selects elements that start with the matching value. Such as `<a href="http://google.com">google</a>`.
+`a[href^="http"]` The `^=` carrot symbol selects elements that start with the matching value, such as `<a href="http://google.com">google</a>`.
 
-`p[class$="dog"]` The `$=` dollar sign selects elements that end with the matching value. Such as `<p class="bigbdog">...</a>`.
+`p[class$="dog"]` The `$=` dollar sign selects elements that end with the matching value, such as `<p class="bigbdog">...</a>`.
 
-`img[alt*="love"]` The `*=` asterisk selects elements that have the matched characters appearing anywhere within the value. Such as `<img src="myimage.jpg" alt="I love you.">`.
+`img[alt*="love"]` The `*=` asterisk selects elements that have the matched characters appearing anywhere within the value, such as `<img src="myimage.jpg" alt="I love you.">`.
 
-`p[class~="monkey"]` The `~=` tilda symbol selects elements that contain the term within a space separated value. Such as `<p class="zoo monkey details">...</p>`.
+`p[class~="monkey"]` The `~=` tilde symbol selects elements that contain the term within a space separated value, such as `<p class="zoo monkey details">...</p>`.
 
-`p[class|="birds"]` The `|=` pipe symbol selects elements that contain the term within a dash separated value. Such as `<p class="new-birds-today">...</p>`.
+`p[class|="birds"]` The `|=` pipe symbol selects elements that contain the term within a dash separated value, such as `<p class="new-birds-today">...</p>`.
 
 #### Pseudo Class
 
@@ -291,13 +292,13 @@ a:link {
 }
 ```
 
-Selects an element with based on the unique relationship or state described in the selector. This selector is indicated by `:` colon symbol, followed by the psuedo class that describes the elements state or positioning amongst other elements.
+This selects an element based on the unique relationship or state described in the selector. This selector is indicated by the `:` colon symbol, followed by the pseudo class that describes the element's state or positioning amongst other elements.
 
 ```html
 <a href="about.html">About</a>
 ```
 
-##### Other psuedo class selectors include:
+##### Other Pseudo Class Selectors Include:
 
 `a:link` selects links in their default state before the visitor has interacted with them.
 
@@ -311,11 +312,11 @@ Selects an element with based on the unique relationship or state described in t
 
 `p:last-child` selects elements that are the last child when appearing inside a common parent. Such as `<div><p>I'm not selected</p><p>Neither am I</p><p>I'm selected</p></div>`
 
-These are just a few psuedo selectors, there are many additional ones you can explore in the resource links provided at the botoom of this lesson.
+These are just a few psuedo selectors, but there are many additional ones you can explore in the resource links provided at the botoom of this lesson.
 
 ### Authority
 
-It is common when we are styling our HTML pages that we might accidentally write two selectors that are targeting the same element. Let's say for example you intend all `<h1>` level 1 headings to have light blue text, but you also gave some of the headings a class of intro `<h1 class="intro">` and these intro headings should have the text color of dark blue instead. What happens to the `<h1 class="intro">` elements will they have light blue or dark blue text? Fortunately CSS has rules that determine which selector wins. The strength of a selector to override another is known as authority. In CSS the more specific a selector the more authority it carries.
+It is common when we are styling our HTML pages that we might accidentally write two selectors that are targeting the same element. Let's say for example you intend all `<h1>` level 1 headings to have light blue text, but you also gave some of the headings a class of intro `<h1 class="intro">` and these intro headings should have the text color of dark blue instead. What happens to the `<h1 class="intro">` elements? Will they have light blue or dark blue text? Fortunately CSS has rules that determine which selector wins. The strength of a selector to override another is known as authority. In CSS the more specific a selector, the more authority it carries.
 
 ```css
 h1 {
@@ -327,21 +328,21 @@ h1 {
 }
 ```
 
-In the CSS code above our first selector `h1` selects all level 1 headings, where as our second selector `.intro`, selects elements that have the specific class of `intro` applied. In the case of the following html which will beat the other?
+In the CSS code above, our first selector `h1` selects all level 1 headings whereas our second selector `.intro` selects elements that have the specific class of `intro` applied. In the case of the following html which will beat the other?
 
 ```html
 <h1 class="intro">Welcome</h1>
 ```
 
-In this case a class is more specific as it is applied to only certain h1, where as selecting all h1s is very general. Thus classes like `.intro` have more authority than a type selector such as `h1`. The end result is that the heading has dark blue text instead of light blue. The general rule is descendent overrides id which overrides class which overrides type which overrides universal. 
+In this case, a class is more specific as it is applied to only certain h1, whereas selecting all h1s is very general. Thus classes like `.intro` have more authority than a type selector such as `h1`. The end result is that the heading has dark blue text instead of light blue. The general rule is that descendent overrides id which overrides class which overrides type which overrides universal. 
 
-If there are two selectors of equal authgority the one that is written further down the page (closer to the bottom) will win. This is the last man rule.
+If there are two selectors of equal authority the one that is written further down the page (closer to the bottom) will win. This is the last man rule.
 
 See the link in the resources at the bottom of the lesson to explore CSS selector authority in more detail.
 
 #### Inheritance
 
-Certain CSS styles are inherited from a parent down to its child elements. One such example is most of the typography properties. We will discuss these in more detail below, but just to give you a quick example. Lets say we add the `font-family: Arial;` to a `ul` unordered list.
+Certain CSS styles are inherited from a parent down to its child elements. One such example is most of the typography properties. We will discuss these in more detail below, but just to give you a quick example let's say we add the `font-family: Arial;` to a `ul` unordered list.
 
 ```css
 ul {
@@ -359,7 +360,7 @@ ul {
 
 In this case, all the `li` list items that are children of the `ul` will inherit the Arial font from their `ul` parent simply by being inside of it.
 
-Certain properties like `font-family` can be inherited by a parent, however other propertied by default are not directly inherited, for example
+Certain properties like `font-family` can be inherited by a parent. However other propertied by default are not directly inherited. See below, for example.
 
 ```css
 ul {
@@ -367,17 +368,17 @@ ul {
 }
 ```
 
-A border will only effect the `ul` it is applied to and the `li` will not inherit the border by default. It is good to know which properties are inherited and which are not. there are also some CSS values that allow us to change the defualt behavior of inheritance. See 
+A border will only affect the `ul` it is applied to and the `li` will not inherit the border by default. It is good to know which properties are inherited and which are not. There are also some CSS values that allow us to change the defualt behavior of inheritance.
 
 ### Colors
 
 #### Names
 
-There are 16 cross browser compatible color names: aqua, black, fuchsia, (gray, grey), green, lime, maroon, navy, olive, purple, red, silver, teal, white, and yellow.
+There are 16 cross browser compatible color names: aqua, black, fuchsia, gray (or grey), green, lime, maroon, navy, olive, purple, red, silver, teal, white, and yellow.
 
 #### Hexidecimal
 
-There are over 16 million possible color combinations using hex values. Hex values are preceeded by a `#` hashtag symbol and follow with three values back to back listed as numbers 0-9 and letters A-F. The first two characters are for the amount of red, followed by green, and blue. For example with F being the largest amount of a color and 0 being the lowest, the hex color `#FF0000` is the brightest color red. In situtaions where the three pairs of hex values match as in the last example you can shorten this to: `#F00` instead. Note that this only works for hex values where each of the three pairs match. The hex color `#3345AF` which incidentally is a dark blue color can not be shortened.
+There are over 16 million possible color combinations using hex values. Hex values are preceeded by a `#` hashtag symbol and follow with three values back to back listed as numbers 0-9 and letters A-F. The first two characters are for the amount of red, followed by green, and blue. For example with F being the largest amount of a color and 0 being the lowest, the hex color `#FF0000` is the brightest color red. In situations where the three pairs of hex values match as in the last example you can shorten this to: `#F00` instead. Note that this only works for hex values where each of the three pairs match. The hex color `#3345AF` which incidentally is a dark blue color can not be shortened.
 
 #### RGB and RGBA
 
@@ -389,11 +390,11 @@ There are other supported values such as HSL (Hue Saturation Lightness) or HSLA 
 
 ### Font Properties
 
-There are many font properties you can adjust. As a developer there are so many things to remember. Over time you remember the things that use regularly through daily use, but no developer knows everything. This makes it important to be comfortable searching for answers, reading documentation, and looking up the code you as you need it. In the case of CSS a good resource for properties is the Mozilla Devlopers Network CSS Property Reference (included in the resource links at the bottom of this lesson). However, here are a few useful font properties and some of their possible values separated by `|` pipes.
+There are many font properties you can adjust. As a developer there are so many things to remember. Over time you remember the things that you encounter regularly through daily use, but no developer knows everything. This makes it important to be comfortable searching for answers, reading documentation, and looking up the code you as you need it. In the case of CSS a good resource for properties is the Mozilla Devlopers Network CSS Property Reference (included in the resource links at the bottom of this lesson). However here are a few useful font properties and some of their possible values separated by `|` pipes.
 
 `font-family: Arial, Helvetica, san-serif`
 
-Font families are separated by commas allowing us fallback solutions if the first font to the left doesn't load the next one to thr right will.
+Font families are separated by commas allowing us fallback solutionns. If the first font to the left doesn't load the next one to the right will.
 
 `font-size: 100% | 1em | 12pt | 16px`
 
@@ -405,11 +406,11 @@ Font style can be set to normal or italic.
 
 `font-weight: normal | bold`
 
-Font weight specifies the thickness of text. You can provide a number 100 - 900 in hundreds only, or normal, bolder, or bolder.
+Font weight specifies the thickness of text. You can provide a number 100 - 900 in hundreds only, or normal, bolder, or boldest.
 
 `color: white | #FFF | rgba(255,255,255,1)`
 
-Colors discussed previously in detail, but it is one of my most used font properties. You can provide a value in color name, hex, rgb, rgba, hsl, or hsla. 
+Colors were discussed previously in detail, but it is one of my most used font properties. You can provide a value in color name, hex, rgb, rgba, hsl, or hsla. 
 
 `font: bold 1em/2em Arial, sans-serif`
 
@@ -417,7 +418,7 @@ The short-hand property `font` allows you to specifiy font-weight, font-style, f
 
 `text-align: left | center | right`
 
-Text align does just what your guessing it aligns the text in any direction, you can also specifiy justified.
+Text align does just what you're guessing it is. It aligns the text in any direction and you can also specify justified.
 
 `text-decoration: none | overline | underline | line-through`
 
@@ -425,7 +426,7 @@ Text decoration is used mostly on links.
 
 `text-indent: 1% | 1em | 12pt | 16px`
 
-Text indents effect the first line of a paragraph.
+Text indents affect the first line of a paragraph.
 
 `text-shadow: 3px 3px 10px #000`
 
@@ -433,31 +434,31 @@ Text shadow is a neat CSS3 property that allows you to provide in order: horizon
 
 `text-transform: none | uppercase | lowercase | capitalize`
 
-Text transform converts the content text to which ever transform you specifiy.
+Text transform converts the content text to whichever transform you specifiy.
 
 `letter-spacing: normal | 1em | 12pt | 16px`
 
-Letter spacing is the same as kerning, it is the space between characters.
+Letter spacing is the same as kerning; it is the space between characters.
 
 `line-height: normal | 1em | 12pt | 16px`
 
-Line height, adjusts the space between lines of text.
+Line height adjusts the space between lines of text.
 
 `word-spacing: normal | 1em | 12pt | 16px`
 
-Word spacing is the space between words, duh. 
+Word spacing is the space between words. 
 
 `word-wrap: normal | break-word`
 
-Word wrap effects if really long words will get hyphenated or not.
+Word wrap affects whether really long words will get hyphenated or not.
 
 `white-space: normal | no-wrap`
 
-White space effects if a body of text within an element will wrap as it reaches the edge of the elements set width.
+White space affects whether a body of text within an element will wrap as it reaches the edge of the element's set width.
 
 ### Web Fonts
 
-Web fonts are a great way to include fonts that are more specialized that may not be able to be loaded from your site visitors computer. Below we will discuss @font-face, but first lets setup our local folder structure to include a special font. In your site project folder you would include a fonts folder and inside you would place any special fonts to include and eventually they would be uploaded to the webserver with your HTML and CSS pages.
+Web fonts are a great way to include fonts that are more specialized that may not be able to be loaded from your site visitor's computer. Below we will discuss @font-face, but first let's set up our local folder structure to include a special font. In your site project folder you would include a fonts folder and inside you would place any special fonts to include and eventually they would be uploaded to the webserver with your HTML and CSS pages.
 
 ```shell
 my-website
@@ -471,7 +472,7 @@ my-website
 └──index.html
 ```
 
-Here we have placed our web font files in our fonts folder. You most likely will have only one file on your computer, but it is a good idea to convert your font into serveral different web font formats. This can be done using an online tool such as: [Web Font Generator](https://www.web-font-generator.com/) This is a great tool, you might want to bookmark this for future use. It allows you to upload your font from your computer and it will generate several web font formats such as: eot, svg, ttf, and woff. Different browsers prefer different formats hence why you might need 3 formats to isure it will work in all browsers. Then in our CSS file at the top of our page we can link to this font as follows
+Here we have placed our web font files in our fonts folder. You most likely will have only one file on your computer, but it is a good idea to convert your font into serveral different web font formats. This can be done using an online tool such as: [Web Font Generator](https://www.web-font-generator.com/) This is a great tool and you might want to bookmark this for future use. It allows you to upload your font from your computer and it will generate several web font formats such as: eot, svg, ttf, and woff. Different browsers prefer different formats hence why you might need 3 formats to ensure it will work in all browsers. Then in our CSS file at the top of our page we can link to this font as follows:
 
 ```css
 @font-face {
@@ -504,11 +505,11 @@ To comment in CSS simply start with `/*` and end with `*/`
 - CSS allows us to style our HTML pages.
 - CSS has three distinct formats, although external CSS is considered the best option for styling websites.
 - CSS provides a wide range of selectors to select different elements. Get to know them all.
-- The more specific a selector the more authority it has.
-- Some properties are inherited from a parent element, some are not.
+- The more specific a selector, the more authority it has.
+- Some properties are inherited from a parent element and others are not.
 - Colors can be specified using color names, hex, rgb, rgba, hsl, or hsla.
-- There are a wide range of font properties to sdjust your text.
-- We can load web fonts that might not be available on the site vistors computer by telling our CSS to load them from our server instead.
+- There are a wide range of font properties to adjust your text.
+- We can load web fonts that might not be available on the site visitor's computer by telling our CSS to load them from our server instead.
 - Comments in CSS are written like `/* this */`.
 
 ## Resources
