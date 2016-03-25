@@ -32,7 +32,7 @@ p {
 }
 ```
 
-In the code example above `p` is known as a selector; in this case it is selecting all paragraphs in the HTML pages linking to this CSS file. Selectors determine which elements will be affected by the styles we set. Following this in `{}` curly braces are declarations which are CSS rules that will style our selected element. Declarations are made up of a property shown here as `color` c followed by a value shown here as `red`. Notice that we use a `:` colon to separate the property from its value. All declarations end in a `;` semicolon. Multiple declarations can be applied to the same selector as seen below. 
+In the code example above `p` is known as a selector; in this case it is selecting all paragraphs in the HTML pages linking to this CSS file. Selectors determine which elements will be affected by the styles we set. Following this in `{}` curly braces are declarations which are CSS rules that will style our selected element. Declarations are made up of a property shown here as `color` followed by a value shown here as `red`. Notice that we use a `:` colon to separate the property from its value. All declarations end in a `;` semicolon. Multiple declarations can be applied to the same selector as seen below. 
 
 ```css
 p {
