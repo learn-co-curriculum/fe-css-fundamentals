@@ -360,7 +360,7 @@ ul {
 
 In this case, all the `li` list items that are children of the `ul` will inherit the Arial font from their `ul` parent simply by being inside of it.
 
-Certain properties like `font-family` can be inherited by a parent. However other propertied by default are not directly inherited. See below, for example.
+Certain properties like `font-family` can be inherited by a parent. However other properties by default are not directly inherited. See below, for example.
 
 ```css
 ul {
@@ -376,7 +376,7 @@ A border will only affect the `ul` it is applied to and the `li` will not inheri
 
 There are 16 cross browser compatible color names: aqua, black, fuchsia, gray (or grey), green, lime, maroon, navy, olive, purple, red, silver, teal, white, and yellow.
 
-#### Hexidecimal
+#### Hexadecimal
 
 There are over 16 million possible color combinations using hex values. Hex values are preceeded by a `#` hashtag symbol and follow with three values back to back listed as numbers 0-9 and letters A-F. The first two characters are for the amount of red, followed by green, and blue. For example with F being the largest amount of a color and 0 being the lowest, the hex color `#FF0000` is the brightest color red. In situations where the three pairs of hex values match as in the last example you can shorten this to: `#F00` instead. Note that this only works for hex values where each of the three pairs match. The hex color `#3345AF` which incidentally is a dark blue color can not be shortened.
 
