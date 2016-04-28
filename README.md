@@ -4,7 +4,7 @@
 
 In this lesson we will learn about the fundamentals of CSS including syntax, formatting, selecting HTML elements to style, as well as font and color properties. 
 
-## Objectives
+## What's Covered in This Lesson 
 
 1. Explain the purpose of CSS
 1. List and use various CSS syntax
