@@ -529,6 +529,4 @@ To comment in CSS simply start with `/*` and end with `*/`
 - [Adobe - Color Scheme Tool](https://color.adobe.com/create/color-wheel/)
 - [CSS Tricks - HSLA](https://css-tricks.com/yay-for-hsla/)
 
-<p data-visibility='hidden'>View <a href='https://learn.co/lessons/fe-css-fundamentals' title='CSS Fundamentals'>CSS Fundamentals</a> on Learn.co and start learning to code for free.</p>
-
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/fe-css-fundamentals'>CSS Fundamentals</a> on Learn.co and start learning to code for free.</p>
