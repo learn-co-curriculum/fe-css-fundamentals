@@ -32,7 +32,6 @@ In this lesson we will learn about the fundamentals of CSS including syntax, for
 
 ## Resources
 
-- [Presentation Slides](https://docs.google.com/presentation/d/1wTkUPKfSKt7ueUeKsZ6cYQ0RjRzpnEDLCqKKTB041P8/edit?usp=sharing)
 - [MDN - CSS Tutorials for Beginners](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Getting_started)
 - [MDN - CSS Property Reference](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference)
 - [MDN - CSS Inheritance](https://developer.mozilla.org/en-US/docs/Web/CSS/inheritance)
