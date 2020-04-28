@@ -16,17 +16,16 @@ In this lesson we will learn about the fundamentals of CSS including syntax, for
 
 <iframe width="640" height="480" src="//www.youtube.com/embed/-k-1TU8qq0Q?rel=0" frameborder="0" allowfullscreen></iframe>
 
-*Note: Slides for this lecture video are provided in the resources at the bottom of this lesson.*
 
 ## Summary
 
 - CSS allows us to style our HTML pages.
-- CSS has three distinct formats, although external CSS is considered the best option for styling websites.
+- CSS has three distinct formats; external CSS is considered the best option for styling websites.
 - CSS provides a wide range of selectors to select different elements. Get to know them all.
 - The more specific a selector, the more authority it has.
 - Some properties are inherited from a parent element and others are not.
 - Colors can be specified using color names, hex, rgb, rgba, hsl, or hsla.
-- There are a wide range of font properties to adjust your text.
+- There are a wide range of font properties you can use to adjust your text.
 - We can load web fonts that might not be available on the site visitor's computer by telling our CSS to load them from our server instead.
 - Comments in CSS are written like `/* this */`.
 
